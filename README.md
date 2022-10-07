@@ -21,7 +21,7 @@ Se trata de crear un blog con login de usuario y que este tenga un rol para crea
 
 <p align="center"><a href="https://themefisher.com/"><img src="https://themefisher.com/images/logo/logo.svg" alt="Theme Fisher"></a></p>
 
-- Creado con una plantilla con licencia MIT  
+- Creado con una plantilla [ThemeFisher](https://aleaparicio.es/proyecto-blog/public) con licencia MIT  
 
 
 ## Base de datos
@@ -42,8 +42,8 @@ Se crea la base de datos MySQL con el sistema de migraciones. Se compone de las 
 ### Páginas
 
 #### Apartado Usuario 
-- Loguin ❌
-- Registro ❌
+- Loguin ✔
+- Registro ✔
 - Mail de confirmación de registro ❌
 - Recuperación de contraseña ❌
 

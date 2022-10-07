@@ -89,10 +89,23 @@
                <div class="search-wrapper">
                   <form action="javascript:void(0)" class="h-100">
                      <input class="search-box pl-4" id="search-query" name="s" type="search" placeholder="Type &amp; Hit Enter...">
-                  </form>
+    ç              </form>
                   <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
                </div>
             </div>
+            @auth
+        {{auth()->user()->name}}
+        <div class="text-end">
+          <a href="{{ route('signout') }}" class="btn btn-outline-light me-2">Logout</a>
+        </div>
+      @endauth
+
+      @guest
+        <div class="text-end">
+          <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
+          <a href="{{ route('register-user') }}" class="btn btn-warning">Sign-up</a>
+        </div>
+      @endguest
          </ul>
       </nav>
    </div>
