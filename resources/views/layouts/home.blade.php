@@ -122,11 +122,11 @@
       @foreach ($sec_entradas_categoria as $ent_tot)
       <ul class="list-unstyled widget-list">
          <li class="media widget-post is-align-items-center">
-            <a href="post-elements.html">
+            <a href="{{ route('entrada', $ent_tot) }}">
                <img loading="lazy" src="{{ asset($ent_tot->imagen_url) }}">
             </a>
             <div class="ml-4">
-               <h5 class="h6 mb-0"><a href="post-elements.html">{{ $ent_tot->titulo }}</a></h5>
+               <h5 class="h6 mb-0"><a href="{{ route('entrada', $ent_tot) }}">{{ $ent_tot->titulo }}</a></h5>
                <small>March 15, 2020</small>
             </div>
          </li>
@@ -166,11 +166,11 @@
       @foreach ($sec_ult_entradas as $ent_tot)
       <ul class="list-unstyled widget-list">
          <li class="media widget-post is-align-items-center">
-            <a href="post-elements.html">
+            <a href="{{ route('entrada', $ent_tot) }}">
                <img loading="lazy" src="{{ asset($ent_tot->imagen_url) }}">
             </a>
             <div class="ml-4">
-               <h5 class="h6 mb-0"><a href="post-elements.html">{{ $ent_tot->titulo }}</a></h5>
+               <h5 class="h6 mb-0"><a href="{{ route('entrada', $ent_tot) }}">{{ $ent_tot->titulo }}</a></h5>
                <small>March 15, 2020</small>
             </div>
          </li>

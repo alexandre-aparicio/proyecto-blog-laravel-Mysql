@@ -23,9 +23,7 @@ class CategoriaController extends Controller
         $datos['categorias']  = Categoria::select('categorias.*', Entrada::raw('count(entradas.id) as cantidad'))
     ->leftJoin('entradas', 'entradas.categoria_id', '=', 'categorias.id')
     ->groupBy('categorias.id')
-    ->get();
-    
-    
+    ->get(); 
 
     
 

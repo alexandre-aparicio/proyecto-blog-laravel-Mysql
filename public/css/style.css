@@ -113,6 +113,10 @@ h6, .h6 {
   border-color: #ddd !important;
 }
 
+.justificar p{
+  text-align: justify;
+}
+
 body {
   background-color: #fff;
   overflow-x: hidden;
