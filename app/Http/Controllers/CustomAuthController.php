@@ -6,6 +6,9 @@ use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
+
 
 class CustomAuthController extends Controller
 {
@@ -45,8 +48,21 @@ class CustomAuthController extends Controller
            
         $data = $request->all();
         $check = $this->create($data);
+
+        
+
+        $mailData = [
+        "name" => $request->name,
+        "dob" => "Cuenta creada con éxito"
+        ];
+
+        Mail::to($request->email)->send(new TestEmail($mailData));
+
+    
+
+
          
-        return redirect("welcome")->withSuccess('You have signed-in');
+        return redirect("/")->withSuccess('You have signed-in');
     }
 
     public function create(array $data)

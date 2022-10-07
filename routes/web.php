@@ -5,6 +5,9 @@ use App\Http\Controllers\CustomAuthController;
 
 use Illuminate\Support\Facades\Route;
 
+use App\Mail\TestEmail;
+use Illuminate\Support\Facades\Mail;
+
 
 Route::get('/', [EntradaController::class, 'index'])->name('welcome');
 Route::get('entradas/{id}', [EntradaController::class, 'show'])->name('entrada');
@@ -20,4 +23,17 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+
+
+
+Route::get('send-email', function(){
+    $mailData = [
+        "name" => "Test NAME",
+        "dob" => "12/12/1990"
+    ];
+
+    Mail::to("torasemida@gmail.com")->send(new TestEmail($mailData));
+
+    dd("Mail Sent Successfully!");
+});
    
