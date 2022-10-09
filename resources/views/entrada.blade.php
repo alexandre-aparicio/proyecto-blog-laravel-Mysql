@@ -32,4 +32,5 @@
       </div>
    </article>
 </div>
+@include('lateral')
 @endsection

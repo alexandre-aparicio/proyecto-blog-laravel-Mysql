@@ -36,4 +36,5 @@
       @endforeach
    </div>
 </div>
+@include('lateral')
 @endsection
