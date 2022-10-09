@@ -23,7 +23,7 @@ class EntradaController extends Controller
         $datos['sec_tags'] = Tags::All();
         $datos['sec_ult_entradas'] = Entrada::take(6)->orderBy('created_at', 'desc')->get();          
         $datos['mismas'] = false; 
-        return view('welcome', $datos);
+        return view('content.welcome', $datos);
     }
 
     public function show( Entrada $id)
@@ -36,7 +36,7 @@ class EntradaController extends Controller
 
         $datos['sec_entradas_categoria'] = Entrada::getEntradasPorCategoria($datos['entrada']->categoria_id);      
         
-        return view('entrada', $datos);
+        return view('content.entrada', $datos);
     }
 
     public function showPorCategoria(Categoria $id)
@@ -48,7 +48,7 @@ class EntradaController extends Controller
         
         
         $datos['mismas'] = false; 
-        return view('categoria', $datos);
+        return view('content.categoria', $datos);
         
     }
 }

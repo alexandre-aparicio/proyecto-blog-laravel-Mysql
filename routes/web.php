@@ -9,11 +9,9 @@ use App\Mail\TestEmail;
 use Illuminate\Support\Facades\Mail;
 
 
-Route::get('/', [EntradaController::class, 'index'])->name('welcome');
-Route::get('entradas/{id}', [EntradaController::class, 'show'])->name('entrada');
-Route::get('categorias/{id}', [EntradaController::class, 'showPorCategoria'])->name('categoria');
-
- 
+Route::get('/', [EntradaController::class, 'index'])->name('content.welcome');
+Route::get('entradas/{id}', [EntradaController::class, 'show'])->name('content.entrada');
+Route::get('categorias/{id}', [EntradaController::class, 'showPorCategoria'])->name('content.categoria');
     
 
     
@@ -25,15 +23,4 @@ Route::post('custom-registration', [CustomAuthController::class, 'customRegistra
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
 
-
-Route::get('send-email', function(){
-    $mailData = [
-        "name" => "Test NAME",
-        "dob" => "12/12/1990"
-    ];
-
-    Mail::to("torasemida@gmail.com")->send(new TestEmail($mailData));
-
-    dd("Mail Sent Successfully!");
-});
    

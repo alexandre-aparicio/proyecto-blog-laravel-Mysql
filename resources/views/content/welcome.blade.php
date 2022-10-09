@@ -1,4 +1,4 @@
-@extends ('layouts.home')
+@extends ('layouts.base')
 @section('title', 'Hola Mundo')
 
 @section('content')
@@ -145,5 +145,5 @@
           </div>
         </article>
       </div>
-       @include('lateral')
+       @include('content.lateral')
       @endsection

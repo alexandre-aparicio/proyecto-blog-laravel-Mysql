@@ -1,10 +1,9 @@
-@extends ('layouts.home')
+@extends ('layouts.base')
 @section('title', 'Hola Mundo')
 @section('content')
 <div class="column is-9-desktop">
    <div class="columns is-desktop is-multiline">
-      @foreach ($entradas as $entrada)
-      
+      @foreach ($entradas as $entrada)      
       <div class="column is-4-desktop">
          <article class="columns is-multiline is-justify-content-center mb-6">
             <div class="column is-12">
@@ -25,10 +24,8 @@
                   @endphp
                   <li class="list-inline-item">Fecha : {{ $pieces[2] }}/{{ $pieces[1] }}/{{ $pieces[0] }}</li>
                   <li class="list-inline-item">Categoria: <a href="{{ route('categoria', $entrada->slug_cat) }}" class="ml-1">{{$entrada->nombre_cat}}</a>
-                  </li>
-                  
-               </ul>
-               
+                  </li>                  
+               </ul>               
                <a href="{{ route('entrada', $entrada) }}" class="btn btn-outline-primary">Ver Entrada</a>
             </div>
          </article>
@@ -36,5 +33,5 @@
       @endforeach
    </div>
 </div>
-@include('lateral')
+@include('content.lateral')
 @endsection

@@ -1,4 +1,4 @@
-@extends ('layouts.home')
+@extends ('layouts.base')
 @section('title', 'Hola Mundo')
 @section('content')
 <div class="column is-9-desktop">
@@ -32,5 +32,5 @@
       </div>
    </article>
 </div>
-@include('lateral')
+@include('content.lateral')
 @endsection
