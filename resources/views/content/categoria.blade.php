@@ -14,7 +14,7 @@
                </div>
             </div>
             <div class="column is-12">
-               <h5><a class="post-title" href="{{ route('entrada', $entrada) }}">{{ $entrada->titulo }}</a></h5>
+               <h5><a class="post-title" href="{{ route('content.entrada', $entrada) }}">{{ $entrada->titulo }}</a></h5>
                <ul class="list-inline post-meta mb-4">
                   <li class="list-inline-item"><i class="ti-user mr-2"></i><a href="#">{{$entrada->nombre_us}}</a>
                   </li>
@@ -23,10 +23,10 @@
                   $pieces = explode("-", $pieces[0]);
                   @endphp
                   <li class="list-inline-item">Fecha : {{ $pieces[2] }}/{{ $pieces[1] }}/{{ $pieces[0] }}</li>
-                  <li class="list-inline-item">Categoria: <a href="{{ route('categoria', $entrada->slug_cat) }}" class="ml-1">{{$entrada->nombre_cat}}</a>
+                  <li class="list-inline-item">Categoria: <a href="{{ route('content.categoria', $entrada->slug_cat) }}" class="ml-1">{{$entrada->nombre_cat}}</a>
                   </li>                  
                </ul>               
-               <a href="{{ route('entrada', $entrada) }}" class="btn btn-outline-primary">Ver Entrada</a>
+               <a href="{{ route('content.entrada', $entrada) }}" class="btn btn-outline-primary">Ver Entrada</a>
             </div>
          </article>
       </div>

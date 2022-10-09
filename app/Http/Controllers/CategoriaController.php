@@ -4,29 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Categoria;
 use App\Models\Entrada;
+use App\Models\Categoria;
+use App\Models\Tags;
 
 class CategoriaController extends Controller
 {
-
-    protected $categorias;
-
     
-    public function show( Categoria $id)
+    public function showPorCategoria(Categoria $id)
     {
+        $datos['sec_categorias'] = Categoria::getCategorias();
+        $datos['sec_tags'] = Tags::All();
+        $datos['sec_ult_entradas'] = Entrada::take(6)->orderBy('created_at', 'desc')->get();
+        $datos['entradas'] = Entrada::getEntradasPorCategoria($id->id);
         
-        $datos = array();
-        $datos['categoria'] = Categoria::find($id);
         
-        $datos['categorias']  = Categoria::select('categorias.*', Entrada::raw('count(entradas.id) as cantidad'))
-        ->leftJoin('entradas', 'entradas.categoria_id', '=', 'categorias.id')
-        ->groupBy('categorias.id')
-        ->get(); 
-
-        $datos['entradas_tot'] = Entrada::take(2)->orderBy('created_at', 'desc')->get();  
-        $datos['entradas'] = getEntradasPorCategoria($id);        
-
+        $datos['mismas'] = false; 
         return view('content.categoria', $datos);
+        
     }
 }
