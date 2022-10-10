@@ -39,16 +39,5 @@ class EntradaController extends Controller
         return view('content.entrada', $datos);
     }
 
-    public function showPorCategoria(Categoria $id)
-    {
-        $datos['sec_categorias'] = Categoria::getCategorias();
-        $datos['sec_tags'] = Tags::All();
-        $datos['sec_ult_entradas'] = Entrada::take(6)->orderBy('created_at', 'desc')->get();
-        $datos['entradas'] = Entrada::getEntradasPorCategoria($id->id);
-        
-        
-        $datos['mismas'] = false; 
-        return view('content.categoria', $datos);
-        
-    }
+    
 }
