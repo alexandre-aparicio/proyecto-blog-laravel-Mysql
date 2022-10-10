@@ -17,7 +17,7 @@ Se trata de crear un blog con login de usuario y que este tenga un rol para crea
 
 - Elementos dinámicos con Javascript y JQuery. 
 
-- Framework CSS Bulma <a href="#"><img src="https://static.sitestack.cn/projects/ruanyifeng-bulma/903470fb9df6a0439b09e40758eba568.png" height="40px" alt="Bulma CSS"></a>
+- Framework CSS Bulma <a href="https://bulma.io/"><img src="https://static.sitestack.cn/projects/ruanyifeng-bulma/903470fb9df6a0439b09e40758eba568.png" height="16px" alt="Bulma CSS"></a>
 
 ## Componentes del Blog
 
