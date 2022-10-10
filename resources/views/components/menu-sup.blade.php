@@ -12,24 +12,21 @@
                </button>
                <ul class="navbar-end navbar-menu" id="navigation">
                   <li class="navbar-item has-dropdown is-hoverable has-active">
-                     <a class="navbar-link">Homepage <small class="ti-angle-down ml-1"></small></a>
+                     <a class="navbar-link">Categorías<small class="ti-angle-down ml-1"></small></a>
                      <div class="navbar-dropdown">
-                        <a class="navbar-item" href="index-full.html">Homepage Full Width</a>
-                        <a class="navbar-item" href="index-full-left.html">Homepage Full With Left Sidebar</a>
-                        <a class="navbar-item" href="index-full-right.html">Homepage Full With Right Sidebar</a>
-                        <a class="navbar-item" href="index-list.html">Homepage List Style</a>
-                        <a class="navbar-item" href="index-list-left.html">Homepage List With Left Sidebar</a>
-                        <a class="navbar-item" href="index-list-right.html">Homepage List With Right Sidebar</a>
+                        @foreach ($sec_categorias as $categoria)
+                        <a class="navbar-item" href="{{ route('content.categoria', $categoria) }}">{{$categoria->nombre}}</a>
+                        @endforeach
                      </div>
                   </li>
                   <li class="navbar-item">
-                     <a class="navbar-link is-arrowless" href="about.html">About</a>
+                     <a class="navbar-link is-arrowless" href="about.html">Sobre nodotros</a>
                   </li>
                   <li class="navbar-item">
-                     <a class="navbar-link is-arrowless" href="contact.html">Contact</a>
+                     <a class="navbar-link is-arrowless" href="contact.html">Contacto</a>
                   </li>
                   <li class="navbar-item has-dropdown is-hoverable has-active">
-                     <a class="navbar-link">Pages <small class="ti-angle-down ml-1"></small></a>
+                     <a class="navbar-link">Entradas Top 10<small class="ti-angle-down ml-1"></small></a>
                      <div class="navbar-dropdown">
                         <a class="navbar-item" href="author.html">Author</a>
                         <a class="navbar-item" href="post-details-1.html">Post Details 1</a>

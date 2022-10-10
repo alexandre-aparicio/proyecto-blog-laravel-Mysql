@@ -14,7 +14,7 @@
                </div>
             </div>
             <div class="column is-12">
-               <h5><a class="post-title" href="{{ route('content.entrada', $entrada) }}">{{ $entrada->titulo }}</a></h5>
+               <h5 class="titol"><a class="post-title" href="{{ route('content.entrada', $entrada) }}">{{ $entrada->titulo }}</a></h5>
                <ul class="list-inline post-meta mb-4">
                   <li class="list-inline-item"><i class="ti-user mr-2"></i><a href="#">{{$entrada->nombre_us}}</a>
                   </li>

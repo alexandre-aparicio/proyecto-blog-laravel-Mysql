@@ -69,8 +69,8 @@ h6, .h6 {
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   text-transform: capitalize;
-  padding: 10px 25px;
-  border-radius: 50px;
+      padding: 6px 25px;
+    
   border: 1px solid;
   position: relative;
   z-index: 1;
@@ -613,8 +613,13 @@ a:hover {
   font-size: 20px;
 }
 
+.titol {
+  min-height: 70px;
+}
+
 .post-title {
   color: #1c1d1f;
+    font-size: 15px;
 }
 .post-title:hover {
   color: #ce8460;
@@ -679,10 +684,11 @@ a:hover {
 
 .post-slider {
   overflow: hidden;
-  margin-bottom: 20px;
+  
+    min-height: 200px;
 }
 .post-slider img {
-  border-radius: inherit;
+  border-radius: 20px;
 }
 .post-slider:hover .prevArrow {
   left: 10px;
