@@ -1,3 +1,5 @@
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -7,7 +9,7 @@
 
 ## Sobre el Proyecto
 
-Se trata de crear un blog con login de usuario y que este tenga un rol para crear posts o únicamente  escribir comentarios.
+Se trata de crear un blog con login de usuario y que este tenga un rol para crear posts o según que roles poder escribir comentarios.
 
 ## Parte técnica
 
@@ -15,7 +17,7 @@ Se trata de crear un blog con login de usuario y que este tenga un rol para crea
 
 - Elementos dinámicos con Javascript y JQuery. 
 
-- CSS Bootstrap
+- Framework CSS Bulma <a href="#"><img src="https://static.sitestack.cn/projects/ruanyifeng-bulma/903470fb9df6a0439b09e40758eba568.png" height="40px" alt="Bulma CSS"></a>
 
 ## Componentes del Blog
 

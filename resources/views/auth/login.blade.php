@@ -25,8 +25,11 @@
 
     <body>
         <div class="hero is-fullheight">
+
             <div class="hero-body is-justify-content-center is-align-items-center">
+
                 <div class="columns is-flex is-flex-direction-column box">
+                    <h3>Loguéate en el Blog</h3>
                     <form method="POST" action="{{ route('login.custom') }}">
                             @csrf
                     <div class="column">
@@ -55,6 +58,7 @@
                 </div>
             </div>
         </div>
+        @include('components.footer')
     </body>
 
 </html>
